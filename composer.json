@@ -1,0 +1,12 @@
+{
+    "name": "abdulsametsahin/laravel-upload-manager",
+    "type": "composer-plugin",
+    "authors": [
+        {
+            "name": "Abdulsamet SAHIN",
+            "email": "abdulsametsah@gmail.com"
+        }
+    ],
+    "require": {
+    }
+}
