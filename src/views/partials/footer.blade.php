@@ -8,6 +8,6 @@
 	<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 	<script src="https://unpkg.com/filepond-plugin-image-crop/dist/filepond-plugin-image-crop.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<script src="{{ asset('uploadManager/js/uploadManager.js?v=1.' . rand(0,9999)) }}"></script>
+	<script src="{{ asset('vendor/abdulsametsahin/UploadManager/js/uploadManager.js?v=1.' . rand(0,9999)) }}"></script>
 </body>
 </html>
