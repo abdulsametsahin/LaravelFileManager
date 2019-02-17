@@ -1,6 +1,6 @@
 {
     "name": "abdulsametsahin/laravel-upload-manager",
-    "type": "composer-plugin",
+    "description": "File Upload Manager for Laravel",
     "authors": [
         {
             "name": "Abdulsamet SAHIN",
