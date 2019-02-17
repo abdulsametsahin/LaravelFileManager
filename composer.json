@@ -19,8 +19,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Barryvdh\\Debugbar\\ServiceProvider"
-            ],
+                "abdulsametsahin\\UploadManager\\UploadManagerServiceProvider"
+            ]
         }
-    },
+    }
 }
