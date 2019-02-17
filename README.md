@@ -1,7 +1,7 @@
 
 
 # File Manager for Laravel
-![](https://i.ibb.co/g6pGFg5/Screenshot-1.png)
+![](https://i.ibb.co/FwLqQ6j/Screenshot-1.png)
 
 
 # Installation
