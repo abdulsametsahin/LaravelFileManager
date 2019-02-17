@@ -3,7 +3,8 @@
 namespace abdulsametsahin\UploadManager;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
+use abdulsametsahin\UploadManager\File;
 
 class UploadManager extends \App\Http\Controllers\Controller
 {
@@ -93,7 +94,7 @@ class UploadManager extends \App\Http\Controllers\Controller
 	public function createFolder(Request $req)
 	{
 		try {
-			$make = mkdir(storage_path("app/".$this->getLastPath())."/". $req->folderName);
+			$make = mkdir(storage_path("app/".$this->getLastPath())."/". $req->folderName, 755);
 			return [
 				'status' => 'success',
 			];
@@ -120,12 +121,9 @@ class UploadManager extends \App\Http\Controllers\Controller
 	public function delete(Request $req)
 	{
 		try {
-			foreach ($req->selectedFiles as $f) {
-				$f = str_replace($this->upload_path, "app/public", $f);
-				if (is_dir(storage_path($f)))
-					$this->deleteDir(storage_path($f));
-				else
-					unlink(storage_path($f));
+			foreach ($req->selectedFiles as $filepath) {
+				$file = new File($filepath);
+				$file->delete();
 			}
 			return [
 				'status' => 'success',
@@ -138,24 +136,29 @@ class UploadManager extends \App\Http\Controllers\Controller
 		}
 	}
 
+	
+
 	/**
-	 * Delete folder.
+	 * Move given files/folders.
 	 */
-	public function deleteDir($dirPath) {
-	    if (! is_dir($dirPath)) {
-	        throw new InvalidArgumentException("$dirPath must be a directory");
-	    }
-	    if (substr($dirPath, strlen($dirPath) - 1, 1) != '/') {
-	        $dirPath .= '/';
-	    }
-	    $files = glob($dirPath . '*', GLOB_MARK);
-	    foreach ($files as $file) {
-	        if (is_dir($file)) {
-	            self::deleteDir($file);
-	        } else {
-	            unlink($file);
-	        }
-	    }
-	    rmdir($dirPath);
+	public function move(Request $req)
+	{
+		try {
+			foreach ($req->selectedFiles as $filepath) {
+
+				$file = new File($filepath);
+				$file->move($req->movePath);
+				
+			}
+			return [
+				'status' => 'success',
+			];
+		}catch (\Exception $e) {
+			return [
+				'status' => 'error',
+				'message' => $e->getMessage()
+			];
+		}
 	}
+
 }

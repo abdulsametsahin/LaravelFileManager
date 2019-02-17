@@ -26,10 +26,10 @@ class UploadManagerServiceProvider extends ServiceProvider
         require __DIR__ . "/routes/routes.php";
 
         $this->loadViewsFrom(__DIR__.'/views', 'UploadManager');
-        /*
+        
         $this->publishes([
             __DIR__.'/public' => public_path('vendor/abdulsametsahin/UploadManager'),
         ], 'public');
-        */
+        
     }
 }

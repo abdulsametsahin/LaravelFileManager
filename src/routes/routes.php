@@ -6,5 +6,6 @@ Route::group(['middleware' => ['web']], function () {
 	    Route::post('/upload', '\\abdulsametsahin\\UploadManager\\UploadManager@upload');
 	    Route::post('/create-folder', '\\abdulsametsahin\\UploadManager\\UploadManager@createFolder');
 	    Route::post('/delete', '\\abdulsametsahin\\UploadManager\\UploadManager@delete');
+	    Route::post('/move', '\\abdulsametsahin\\UploadManager\\UploadManager@move');
 	});
 });
