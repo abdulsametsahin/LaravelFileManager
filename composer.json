@@ -1,6 +1,7 @@
 {
     "name": "abdulsametsahin/laravel-upload-manager",
     "description": "File Upload Manager for Laravel",
+    "license": "MIT",
     "authors": [
         {
             "name": "Abdulsamet SAHIN",
@@ -9,5 +10,10 @@
     ],
     "require": {
         
+    },
+    "autoload": {
+        "psr-4": {
+            "abdulsametsahin\\": "src/"
+        }
     }
 }
