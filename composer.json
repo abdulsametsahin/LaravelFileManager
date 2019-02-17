@@ -15,5 +15,12 @@
         "psr-4": {
             "abdulsametsahin\\": "src/"
         }
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Barryvdh\\Debugbar\\ServiceProvider"
+            ],
+        }
+    },
 }
