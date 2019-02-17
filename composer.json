@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "\\abdulsametsahin\\UploadManager\\UploadManagerServiceProvider\\": "abdulsametsahin/laravel-upload-manager/src/"
+            "\\abdulsametsahin\\UploadManager\\UploadManagerServiceProvider\\": "src/"
         }
     },
     "extra": {
