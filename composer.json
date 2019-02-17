@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "abdulsametsahin\\": "src/"
+            "\\abdulsametsahin\\UploadManager\\UploadManagerServiceProvider\\": "src/"
         }
     },
     "extra": {
