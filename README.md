@@ -9,3 +9,5 @@
     composer require abdulsametsahin/laravel-upload-manager
     php artisan vendor:publish --tag=public --force
     php artisan storage:link
+
+Then you can visit //domain.com/upload-manager
